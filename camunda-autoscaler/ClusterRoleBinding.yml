@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: aramadan-rolebinding
+  
+subjects:
+- kind: ServiceAccount
+  name: aramadan-sa
+  
+roleRef:
+  kind: Role
+  name: aramadan-clusterrole
+  apiGroup: rbac.authorization.k8s.io

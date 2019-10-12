@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: aramadan-pod
+spec:
+ serviceAccountName: aramadan-sa
+ containers:
+   - name: autoscaler
+     image: ahmedsramadan/camunda:autoscaler

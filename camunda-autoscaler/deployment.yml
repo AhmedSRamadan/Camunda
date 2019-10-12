@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aramadan
+spec:
+  selector:
+    matchLabels:
+      run: aramadan
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: aramadan
+    spec:
+      containers:
+      - name: aramadan
+        image: ahmedsramadan/camunda
+        ports:
+        - containerPort: 80
